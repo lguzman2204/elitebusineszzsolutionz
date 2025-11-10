@@ -11,35 +11,27 @@
   <link rel="icon" href="/favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{
-      --navy:#0b1f3a;
-      --gold:#f7b500;
+    :root {
+      --navy: #0b1f3a;
+      --gold: #f7b500;
     }
-    .brand-gradient{background: linear-gradient(135deg,var(--navy),#132b53);}    
-    .shine{ position: relative; overflow: hidden; }
-    .shine::after{ content: ""; position: absolute; inset:-100% -150% auto auto; width:40%; height:400%; transform: rotate(25deg); background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.35) 40%, transparent 80%); animation: shine 6s linear infinite;}
-    @keyframes shine{ 0%{ transform: translateX(-120%) rotate(25deg);} 100%{ transform: translateX(220%) rotate(25deg);} }
+    .brand-gradient {
+      background: linear-gradient(135deg, var(--navy), #132b53);
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 scroll-smooth">
+
   <!-- Header -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3">
-        <svg width="40" height="40" viewBox="0 0 64 64" class="rounded-xl shadow-md" aria-label="Elite Business Solutions logo">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#0b1f3a"/>
-              <stop offset="100%" stop-color="#132b53"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#g)"/>
-          <g fill="#f7b500" font-family="Inter, ui-sans-serif, system-ui" font-weight="800">
-            <text x="15" y="39" font-size="26">EB</text>
-          </g>
-          <circle cx="48" cy="48" r="6" fill="#f7b500"/>
-        </svg>
-        <span class="font-extrabold tracking-tight text-slate-900">Elite <span class="text-[var(--gold)]">Business</span> Solutions</span>
+        <div class="w-9 h-9 rounded-xl brand-gradient grid place-items-center shadow-md">
+          <span class="text-white font-black">E</span>
+        </div>
+        <span class="font-extrabold tracking-tight text-slate-900">
+          Elite <span class="text-[var(--gold)]">Business</span> Solutions
+        </span>
       </a>
       <nav class="hidden md:flex items-center gap-8 font-medium">
         <a href="#services" class="hover:text-[var(--gold)]">Services</a>
@@ -59,6 +51,7 @@
         <h2 class="text-3xl md:text-4xl font-extrabold">Book a Consultation</h2>
         <p class="mt-2 text-slate-100">Fill out the form below and we’ll reach out to confirm your booking.</p>
       </div>
+
       <div class="grid md:grid-cols-2 gap-6">
         <form action="https://formspree.io/f/mgvrwbda" method="POST" class="bg-white/10 border border-white/20 rounded-2xl p-6 space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -71,16 +64,18 @@
               <input type="text" name="business" placeholder="Your Company" class="mt-1 w-full rounded-xl border-none px-4 py-3 text-slate-900" />
             </div>
           </div>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm">Phone</label>
-              <input type="tel" name="phone" required placeholder="(555) 123‑4567" class="mt-1 w-full rounded-xl border-none px-4 py-3 text-slate-900" />
+              <input type="tel" name="phone" required placeholder="(555) 123-4567" class="mt-1 w-full rounded-xl border-none px-4 py-3 text-slate-900" />
             </div>
             <div>
               <label class="text-sm">Email</label>
               <input type="email" name="email" required placeholder="you@domain.com" class="mt-1 w-full rounded-xl border-none px-4 py-3 text-slate-900" />
             </div>
           </div>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm">Service</label>
@@ -101,6 +96,7 @@
               </select>
             </div>
           </div>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm">Preferred Date</label>
@@ -111,29 +107,24 @@
               <input type="time" name="time" class="mt-1 w-full rounded-xl border-none px-4 py-3 text-slate-900" />
             </div>
           </div>
+
           <div>
             <label class="text-sm">Project Details</label>
             <textarea name="details" rows="4" placeholder="Tell us about your services, pages needed, or any examples you like…" class="mt-1 w-full rounded-xl border-none px-4 py-3 text-slate-900"></textarea>
           </div>
+
           <button type="submit" class="w-full px-5 py-3 rounded-xl bg-[var(--gold)] text-[var(--navy)] font-bold hover:opacity-90">Submit Form</button>
-          <p class="text-xs text-slate-200">Or call/text <a class="underline" href="tel:+13053384970">(305) 338‑4970</a>.</p>
+          <p class="text-xs text-slate-200">Or call/text <a class="underline" href="tel:+13053384970">(305) 338-4970</a>.</p>
         </form>
+
         <div class="space-y-5">
           <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
             <h3 class="font-bold text-xl">Contact</h3>
             <ul class="mt-3 space-y-2 text-slate-100">
-              <li>📞 <a href="tel:+13053384970" class="underline">(305) 338‑4970</a></li>
+              <li>📞 <a href="tel:+13053384970" class="underline">(305) 338-4970</a></li>
               <li>✉️ <a href="mailto:hello@elitebizsolutions.example" class="underline">hello@elitebizsolutions.example</a></li>
               <li>🕒 Mon–Sat • 9am–6pm</li>
             </ul>
-          </div>
-          <div class="bg-white/10 border border-white/20 rounded-2xl p-6">
-            <h3 class="font-bold text-xl">Service Area</h3>
-            <p class="mt-2 text-slate-100">Sylvania • Toledo • NW Ohio (remote available anywhere)</p>
-            <div class="mt-4 flex gap-3">
-              <a href="https://maps.google.com/?q=Sylvania%2C%20OH" target="_blank" class="px-4 py-2 rounded-xl bg-white text-[var(--navy)] font-semibold">View on Maps</a>
-              <a href="#pricing" class="px-4 py-2 rounded-xl ring-1 ring-white/60">See Pricing</a>
-            </div>
           </div>
         </div>
       </div>
@@ -155,6 +146,9 @@
       </div>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
